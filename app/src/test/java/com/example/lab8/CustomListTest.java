@@ -58,4 +58,15 @@ public class CustomListTest {
         list.deleteCity(city);
         assertFalse(list.hasCity(city));
     }
+
+    /**
+     * create a list, add some cities, check the count
+     */
+    @Test
+    public void cityCountTest() {
+        City city = new City("Edmonton", "AB");
+        list.addCity(city);
+        list.addCity(city);
+        assertEquals(list.countCities(), 2);
+    }
 }
